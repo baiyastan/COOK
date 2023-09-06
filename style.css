@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Rubik:wght@600;700&display=swap");
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color: #252b42;
+    font-weight: 500;
+    font-family: Archivo;
+}
+
+:root {
+    --Background: #ffffff;
+    --Primary: #d27722;
+    --Primary-Lighten: #ffdbbb;
+    --Secondary-Background: #fffdf4;
+    --Text-Color: #252422;
+    --Text-Color-Secondary: #403d39;
+}
+/* ----------------------------------- */
+
+.wrapper {
+    max-width: 1440px;
+    height: 100%;
+    background-color: var(--Background);
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1313px;
+    margin: 0 auto;
+}
+
+/* -------------------header */
+
+.header {
+    width: 100%;
+    height: 104px;
+    border-bottom: 1px solid var(--Primary_Lighten);
+    padding-top: 38px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo h2 {
+    color: var(--Primary);
+    font-family: Rubik;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.64px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.nav-links li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7px;
+}
+
+.nav-links li img {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-links li p {
+    color: var(--Text-Color);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-actions img {
+    width: 24px;
+    height: 24px;
+}
+
+.login {
+    display: flex;
+    width: 131px;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background-color: var(--Primary);
+    color: #fff;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+#language-select,
+#currency-select {
+    appearance: none;
+    background-image: url("aseets/svg/01.svg"); /* Replace with your custom arrow icon image */
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 15px; /* Adjust as needed to make room for the arrow */
+    color: var(--Text-Color, #252422);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    background-color: var(--Background);
+    outline: none;
+}
+
+#language-select option,
+#currency-select option {
+    color: var(--Text-Color-Secondary);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Primary-Lighten);
+    border-radius: 6px;
+    background: #fff;
+}
+
+.buger-menu {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+    .nav {
+        padding: 0px 48px;
+    }
+}
+
+@media (max-width: 767px) {
+    .buger-menu {
+        display: flex;
+        width: 41px;
+        height: 41px;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: var(--Primary);
+    }
+    .user-actions {
+        display: none;
+    }
+    .nav {
+        padding: 0px 32px;
+    }
+}
